@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-export const AuthFormLogin: React.FC = () => {
+export const AuthForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>(''); 
-
+  const [Cpassword, setCPassword] = useState<string>(''); 
 
   const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>) => 
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,9 +49,20 @@ export const AuthFormLogin: React.FC = () => {
             />
             
           </div>
-          
+          <div>
+            <label htmlFor="Cpassword" className="block text-sm font-medium text-gray-700">Confirmer le mot de passe:</label>
+            <input
+              type="Cpassword"
+              id="Cpassword"
+              value={Cpassword}
+              onChange={handleChange(setCPassword)}
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+            
+          </div>
           <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-           Se connecter
+           Créer
           </button>
         </form>
       </div>
