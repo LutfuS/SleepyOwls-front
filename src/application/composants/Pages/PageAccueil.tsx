@@ -1,5 +1,6 @@
-export const Paccueil = () => {
 
+export const Paccueil = () => {
+    
     return(
         <div>
 
