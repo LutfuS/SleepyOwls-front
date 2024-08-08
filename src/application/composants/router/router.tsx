@@ -6,6 +6,8 @@ import { AuthFormLogin } from "../Pages/Auth/AuthLoginForm";
 import { Paccueil } from "../Pages/PageAccueil";
 import { Horloge } from "../Pages/TimerAlarm";
 import { GraphStatistique } from "../Pages/PageStatistique";
+import { Settings } from "../Pages/PageSettings";
+import { Journal } from "../Pages/PageJournal";
 
 
 export const router = createBrowserRouter([
@@ -34,13 +36,22 @@ export const router = createBrowserRouter([
             element: <Paccueil />,
           },
           {
-            path: "/TimerAlarm",
+            path: "/PageSommeil",
             element: <Horloge />,
           },
           {
             path: "/PageStatistique",
             element: <GraphStatistique/>
+          },
+          {
+            path: "/PageSettings",
+            element: <Settings/>
+          },
+          {
+            path: "/PageJournal",
+            element: <Journal/>
           }
+
        
        
         

@@ -44,13 +44,13 @@ export const  Horloge =()=> {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-800 to-gray-900 text-white">
+    <div className="bg-[#091928] flex flex-col items-center justify-center min-h-screen  to-gray-900 text-white">
       {/* Montre le temps réel*/}
       <div className="text-6xl font-mono mb-8">
         {`${padNumber(currentTime.getHours())}:${padNumber(currentTime.getMinutes())}:${padNumber(currentTime.getSeconds())}`}
       </div>
       <div className="mt-4">
-        <h2 className="text-2xl">Regler l'alarme</h2>
+        <h2 className="text-center text-2xl">Régler l'alarme</h2>
         <div className="flex items-center mt-2">
           {/* liste déroulante heures */}
           <select

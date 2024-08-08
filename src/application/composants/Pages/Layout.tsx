@@ -1,34 +1,52 @@
 import { NavLink, Outlet } from "react-router-dom";
 import React from "react";
+import logoStat from '../assets/Chart Bar.png';
+import logoAccueil from '../assets/Crescent Moon.png';
+import logoJournal from '../assets/Moleskine.png';
+import logoSettings from '../assets/Settings.png';
+import logoHome from '../assets/Vector.png';
 
 export const Layoutp: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <div className="">
+      <div>
         <Outlet />
       </div>
 
-      <div className="bg-blue-500 p-4 shadow-md flex justify-around items-center text-white space-x-4">
-        <NavLink to="/" className="hover:text-gray-200">
-          Home
+      <div className="bg-[#083344] p-4 shadow-md flex justify-around items-center space-x-4 text-white">
+        <NavLink to="/" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={logoHome} alt="Home Icon" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Home</span>
         </NavLink>
-        <NavLink to="/AuthForm" className="hover:text-gray-200">
-          Créer
+
+        <NavLink to="/PageSommeil" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={logoAccueil} alt="Sommeil Icon" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Sommeil</span>
         </NavLink>
-        <NavLink to="/AuthFormLogin" className="hover:text-gray-200">
-          Se connecter
+
+        <NavLink to="/AuthForm" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={""} alt="" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Créer</span>
         </NavLink>
-        {/* <NavLink to="/Consent" className="hover:text-gray-200">
-          Consentement
-        </NavLink> */}
-        {/* <NavLink to="/PageAccueil" className="hover:text-gray-200">
-          Sommeil
-        </NavLink> */}
-        <NavLink to="/TimerAlarm" className="hover:text-gray-200">
-          Horloge
+
+        <NavLink to="/AuthFormLogin" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={""} alt="" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Se connecter</span>
         </NavLink>
-        <NavLink to="/PageStatistique" className="hover:text-gray-200">
-         Statistiques
+
+        <NavLink to="/PageJournal" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={logoJournal} alt="Paramètres Icon" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Journal</span>
+        </NavLink>
+
+        <NavLink to="/PageStatistique" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={logoStat} alt="Statistiques Icon" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Statistiques</span>
+        </NavLink>
+
+        <NavLink to="/PageSettings" className="hover:text-gray-200 flex flex-col items-center">
+          <img src={logoSettings} alt="Paramètres Icon" className="w-6 h-6 mb-1" />
+          <span className="text-sm">Paramètres</span>
         </NavLink>
       </div>
     </div>
