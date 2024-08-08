@@ -22,20 +22,7 @@ export const Consent: React.FC = () => {
         </p>
       </div>
       
-      <div className="flex items-center mb-4">
-        <input type="checkbox" className="mr-4" id="consent-donnée1" />
-        <label htmlFor="consent-donnée1" className="text-sm">
-          Autorisez-vous «SleepyOwls» à stocker vos données de santé sur nos serveurs sécurisés.
-        </label>
-      </div>
      
-
-      <div className="flex items-center">
-        <input type="checkbox" className="mr-4" id="consent-donnée2" />
-        <label htmlFor="consent-donnée2" className="text-sm">
-          Autorisez-vous «SleepyOwls» à traiter vos données de santé pour améliorer la fonctionnalité de l’application.
-        </label>
-      </div>
       
     </div>
   );

@@ -18,13 +18,13 @@ export const AuthFormLogin: React.FC = () => {
   return (
     
     <div 
-      className="flex items-center justify-center min-h-screen bg-[#091928]" // Couleur de fond
+      className="flex items-center justify-center min-h-screen bg-[#091928]" 
     >
       <div className="bg-gray-100 bg-opacity-90 p-8 rounded-lg shadow-lg max-w-md w-full md:w-1/3">
        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <div className='bg-red-500'>
+            <div className=''>
               <h1>BIENVENUE</h1>
             </div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>

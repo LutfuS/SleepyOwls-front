@@ -18,13 +18,13 @@ export const AuthForm: React.FC = () => {
   return (
     
     <div 
-      className="flex items-center justify-center min-h-screen bg-[#091928]" // Couleur de fond
+      className="flex items-center justify-center min-h-screen bg-[#091928]" 
     >
       <div className="bg-gray-100 bg-opacity-90 p-8 rounded-lg shadow-lg max-w-md w-full md:w-1/3">
        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <div className='bg-red-500'>
+            <div className=''>
               <h1>BIENVENUE</h1>
             </div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
@@ -61,9 +61,24 @@ export const AuthForm: React.FC = () => {
             />
             
           </div>
+          <div className="flex items-center mb-4">
+        <input type="checkbox" className="mr-4" id="consent-donnée1" />
+        <label htmlFor="consent-donnée1" className="text-sm">
+          Autorisez-vous «SleepyOwls» à stocker vos données de santé sur nos serveurs sécurisés.
+        </label>
+      </div>
+     
+
+      <div className="flex items-center">
+        <input type="checkbox" className="mr-4" id="consent-donnée2" />
+        <label htmlFor="consent-donnée2" className="text-sm">
+          Autorisez-vous «SleepyOwls» à traiter vos données de santé pour améliorer la fonctionnalité de l’application.
+        </label>
+      </div>
           <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
            Créer
           </button>
+         
         </form>
       </div>
     </div>
