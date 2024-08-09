@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import { AuthForm } from "../Pages/Auth/AuthCreateLoginForm";
 import { Consent } from "../Pages/PageConsentement";
 import { Layoutp } from "../Pages/Layout";
-import { AuthFormLogin } from "../Pages/Auth/AuthLoginForm";
+import { AuthConnexionForm } from "../Pages/Auth/AuthConnexionForm";
 import { Paccueil } from "../Pages/PageAccueil";
 import { Horloge } from "../Pages/TimerAlarm";
 import { GraphStatistique } from "../Pages/PageStatistique";
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
         },
         {
             path: "/AuthFormLogin",
-            element: <AuthFormLogin />,
+            element: <AuthConnexionForm />,
           },
         {
           path: "/Consent",
