@@ -20,6 +20,8 @@ const genererEtiquettesSemaine = () => {
     return etiquettes;
 };
 
+
+
 export const GraphiqueSommeil1 = () => {
     const etiquettes = genererEtiquettesSemaine();
     
@@ -59,7 +61,7 @@ export const GraphiqueSommeil1 = () => {
                                     top: 10,
                                     bottom: 30
                                 },
-                                color: '#333'
+                                color: '#fff' // White text for title
                             },
                             legend: {
                                 display: true,
@@ -68,7 +70,7 @@ export const GraphiqueSommeil1 = () => {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for legend
                                 }
                             },
                             tooltip: {
@@ -94,13 +96,13 @@ export const GraphiqueSommeil1 = () => {
                                     font: {
                                         size: 18
                                     },
-                                    color: '#666'
+                                    color: '#fff' // White text for x-axis title
                                 },
                                 ticks: {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for x-axis ticks
                                 }
                             },
                             y: {
@@ -114,13 +116,13 @@ export const GraphiqueSommeil1 = () => {
                                     font: {
                                         size: 18
                                     },
-                                    color: '#666'
+                                    color: '#fff' // White text for y-axis title
                                 },
                                 ticks: {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for y-axis ticks
                                 }
                             }
                         }
@@ -131,6 +133,7 @@ export const GraphiqueSommeil1 = () => {
         </>
     );
 };
+
 export const GraphiqueSommeil2 = () => {
     const etiquettes = genererEtiquettesSemaine();
     
@@ -170,7 +173,7 @@ export const GraphiqueSommeil2 = () => {
                                     top: 10,
                                     bottom: 30
                                 },
-                                color: '#333'
+                                color: '#fff' // White text for title
                             },
                             legend: {
                                 display: true,
@@ -179,7 +182,7 @@ export const GraphiqueSommeil2 = () => {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for legend
                                 }
                             },
                             tooltip: {
@@ -205,13 +208,13 @@ export const GraphiqueSommeil2 = () => {
                                     font: {
                                         size: 18
                                     },
-                                    color: '#666'
+                                    color: '#fff' // White text for x-axis title
                                 },
                                 ticks: {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for x-axis ticks
                                 }
                             },
                             y: {
@@ -225,13 +228,13 @@ export const GraphiqueSommeil2 = () => {
                                     font: {
                                         size: 18
                                     },
-                                    color: '#666'
+                                    color: '#fff' // White text for y-axis title
                                 },
                                 ticks: {
                                     font: {
                                         size: 14
                                     },
-                                    color: '#333'
+                                    color: '#fff' // White text for y-axis ticks
                                 }
                             }
                         }
@@ -293,7 +296,7 @@ export const GraphiqueRecap = () => {
                                 top: 10,
                                 bottom: 30
                             },
-                            color: '#333'
+                            color: '#fff' // White text for title
                         },
                         legend: {
                             display: true,
@@ -302,7 +305,7 @@ export const GraphiqueRecap = () => {
                                 font: {
                                     size: 14
                                 },
-                                color: '#333'
+                                color: '#fff' // White text for legend
                             }
                         },
                         tooltip: {
@@ -328,13 +331,13 @@ export const GraphiqueRecap = () => {
                                 font: {
                                     size: 18
                                 },
-                                color: '#666'
+                                color: '#fff' // White text for x-axis title
                             },
                             ticks: {
                                 font: {
                                     size: 14
                                 },
-                                color: '#333'
+                                color: '#fff' // White text for x-axis ticks
                             }
                         },
                         y: {
@@ -348,18 +351,17 @@ export const GraphiqueRecap = () => {
                                 font: {
                                     size: 18
                                 },
-                                color: '#666'
+                                color: '#fff' // White text for y-axis title
                             },
                             ticks: {
                                 font: {
                                     size: 14
                                 },
-                                color: '#333'
+                                color: '#fff' // White text for y-axis ticks
                             }
                         }
                     }
                 }}
-               
             />
         </div>
     );

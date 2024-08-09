@@ -7,7 +7,7 @@ export const GraphStatistique = ()=> {
 
 
     return(
-        <div className=''>
+        <div className='bg-[#091928]'>
         <GraphiqueSommeil1/>
         <GraphiqueSommeil2/>
         </div>
