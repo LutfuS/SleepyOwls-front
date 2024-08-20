@@ -8,6 +8,11 @@ import { Horloge } from "../Pages/TimerAlarm";
 import { GraphStatistique } from "../Pages/PageStatistique";
 import { Settings } from "../Pages/PageSettings";
 import { Journal } from "../Pages/PageJournal";
+import { Notif } from "../Pages/Parametre_notifications";
+import { Compte } from "../Pages/Parametre_compte";
+import { Doc } from "../Pages/Parametre_documentations";
+import { Rappel } from "../Pages/Parametre_Rappel";
+import { Conseil } from "../Pages/Parametre_conseil";
 
 
 export const router = createBrowserRouter([
@@ -50,7 +55,30 @@ export const router = createBrowserRouter([
           {
             path: "/PageJournal",
             element: <Journal/>
-          }
+          },
+          {
+            path: "/Parametre_notifications",
+            element: <Notif/>
+          },
+          {
+            path: "/Parametre_compte",
+            element: <Compte/>
+          },
+          {
+            path: "/Parametre_documentations",
+            element: <Doc/>
+          },
+          {
+            path: "/Parametre_Rappel",
+            element: <Rappel/>
+          },
+          {
+            path: "/Parametre_conseil",
+            element: <Conseil/>
+          },
+          
+          
+
 
        
        
