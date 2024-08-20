@@ -27,8 +27,8 @@ export const Settings = () => {
           <NavLink to="/Parametre_Vibration" className="hover:text-gray-200 text-base md:text-lg mt-1">
             Vibration
           </NavLink>
-          <NavLink to="/" className="hover:text-gray-200 text-base md:text-lg mt-2">
-            Détection du mouvement
+          <NavLink to="/Parametre_detection" className="hover:text-gray-200 text-base md:text-lg mt-2">
+            Microphone
           </NavLink>
         </div>
 

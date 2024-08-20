@@ -13,6 +13,9 @@ import { Compte } from "../Pages/Parametre_compte";
 import { Doc } from "../Pages/Parametre_documentations";
 import { Rappel } from "../Pages/Parametre_Rappel";
 import { Conseil } from "../Pages/Parametre_conseil";
+import { TutoList } from "../../tutoapp/components/TutoListe";
+import { Vibration } from "../Pages/Parametre_Vibration";
+import { Detection } from "../Pages/Parametre_detection";
 
 
 export const router = createBrowserRouter([
@@ -76,8 +79,22 @@ export const router = createBrowserRouter([
             path: "/Parametre_conseil",
             element: <Conseil/>
           },
-          
-          
+          {
+            path: "/Parametre_Vibration",
+            element: <Vibration/>
+          },
+          {
+            path: "/Tuto",
+            element: <TutoList/>
+          },
+          {
+            path: "/PageConsentement",
+            element: <Consent/>
+          },
+          {
+            path: "/Parametre_detection",
+            element: <Detection/>
+          },
 
 
        

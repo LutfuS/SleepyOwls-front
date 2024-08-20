@@ -1,28 +1,35 @@
 export const Notif = () => {
-    
-
-
     return (
-        <>
-        <div className="bg-[#091928]">
-            <h1>Notification</h1>
+      <div className="bg-[#091928] min-h-screen flex flex-col items-center text-white p-4 md:p-8">
+        {/* Titre principal */}
+        <div className="w-full text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold">Notifications</h1>
         </div>
-        <div className="">
-<input type="checkbox" />
-<label htmlFor="S1">
-    Sons
-</label>
+  
+        {/* Options de notification */}
+        <div className="flex flex-col items-center w-full">
+          <div className="flex items-center space-x-2 mb-6">
+            <input type="checkbox" id="S1" className="form-checkbox text-[#1D9BF0]" />
+            <label htmlFor="S1" className="text-lg md:text-xl">Sons</label>
+          </div>
+          
+          <div className="flex items-center space-x-2 mb-6">
+            <input type="checkbox" id="S2" className="form-checkbox text-[#1D9BF0]" />
+            <label htmlFor="S2" className="text-lg md:text-xl">Notifications par e-mail</label>
+          </div>
         </div>
-        <div className="">
-            <input type="checkbox" />
-            <label htmlFor="S2"></label>
+  
+        {/* Ligne de séparation */}
+        <div className="w-3/4 border-t border-gray-600 my-8" />
+  
+        {/* Section À propos */}
+        <div className="w-full text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">À propos</h2>
+          <p className="text-base md:text-lg">
+            Cette option permet de paramétrer vos notifications.
+          </p>
         </div>
-        <div className="">
-            <h1>A propos</h1>
-        </div>
-        <div className="">
-            <p>Cette option permet de parametrer vos notifications</p>
-        </div>
-        </>
-    )
-}
+      </div>
+    );
+  };
+  
