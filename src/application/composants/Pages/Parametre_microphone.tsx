@@ -1,6 +1,6 @@
 
 
-export const Detection = () => {
+export const Microphone = () => {
   return (
     <div className="bg-[#091928] min-h-screen flex flex-col items-center text-white p-4 md:p-8">
       {/* Titre principal */}

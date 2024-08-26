@@ -39,10 +39,7 @@ export const Layoutp: React.FC = () => {
           <span className="text-xs sm:text-sm">Paramètres</span>
         </NavLink>
 
-        <NavLink to="/Tuto" className="hover:text-gray-200 flex flex-col items-center">
-          <img src={""} alt="Tuto Icon" className="w-6 h-6 mb-1" />
-          <span className="text-xs sm:text-sm">Tuto</span>
-        </NavLink>
+        
       </div>
     </div>
   );

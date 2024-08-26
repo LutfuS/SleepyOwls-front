@@ -366,3 +366,4 @@ export const GraphiqueRecap = () => {
         </div>
     );
 };
+

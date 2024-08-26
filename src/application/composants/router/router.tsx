@@ -15,7 +15,7 @@ import { Rappel } from "../Pages/Parametre_Rappel";
 import { Conseil } from "../Pages/Parametre_conseil";
 import { TutoList } from "../../tutoapp/components/TutoListe";
 import { Vibration } from "../Pages/Parametre_Vibration";
-import { Detection } from "../Pages/Parametre_detection";
+import {  Microphone } from "../Pages/Parametre_microphone";
 
 
 export const router = createBrowserRouter([
@@ -92,8 +92,8 @@ export const router = createBrowserRouter([
             element: <Consent/>
           },
           {
-            path: "/Parametre_detection",
-            element: <Detection/>
+            path: "/Parametre_microphone",
+            element: <Microphone/>
           },
 
 
