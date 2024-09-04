@@ -8,7 +8,7 @@ import { Horloge } from "../Pages/TimerAlarm";
 import { GraphStatistique } from "../Pages/PageStatistique";
 import { Settings } from "../Pages/PageSettings";
 import { Journal } from "../Pages/PageJournal";
-import { Notif } from "../Pages/Parametre_notifications";
+import { ParamNotif } from "../Pages/Parametre_notifications";
 import { Compte } from "../Pages/Parametre_compte";
 import { Doc } from "../Pages/Parametre_documentations";
 import { Rappel } from "../Pages/Parametre_Rappel";
@@ -61,7 +61,8 @@ export const router = createBrowserRouter([
           },
           {
             path: "/Parametre_notifications",
-            element: <Notif/>
+            element: <ParamNotif/>
+            
           },
           {
             path: "/Parametre_compte",

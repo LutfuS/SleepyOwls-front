@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
+import { addOneUser } from '../../router/AuthRouter';
 
 export const AuthForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>(''); 
   const [Cpassword, setCPassword] = useState<string>(''); 
 
-  const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>) => 
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setter(e.target.value);
-    };
+  
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    addOneUser(email, password)
   };
 
   return (
@@ -32,7 +30,7 @@ export const AuthForm: React.FC = () => {
               type="text"
               id="email"
               value={email}
-              onChange={handleChange(setEmail)}
+              onChange={(e) =>setEmail(e.currentTarget.value)}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
@@ -43,7 +41,7 @@ export const AuthForm: React.FC = () => {
               type="password"
               id="password"
               value={password}
-              onChange={handleChange(setPassword)}
+              onChange={(e) => setPassword(e.currentTarget.value)}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
@@ -55,7 +53,7 @@ export const AuthForm: React.FC = () => {
               type="Cpassword"
               id="Cpassword"
               value={Cpassword}
-              onChange={handleChange(setCPassword)}
+              onChange={(e) => setCPassword(e.currentTarget.value)}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
