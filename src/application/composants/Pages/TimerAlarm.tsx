@@ -7,7 +7,7 @@ export const Horloge = () => {
   const [alarmTime, setAlarmTime] = useState({ hours: 0, minutes: 0 });
   const [alarmSet, setAlarmSet] = useState(false);
 
-  // Modifier le temps réel toutes les secondes
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
@@ -15,7 +15,7 @@ export const Horloge = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Vérifier si c'est l'heure de réveil
+ 
   useEffect(() => {
     if (
       alarmSet &&
@@ -28,18 +28,17 @@ export const Horloge = () => {
     }
   }, [currentTime, alarmSet, alarmTime]);
 
-  // Lancer l'alarme
+
   const handleSetAlarm = () => {
     setAlarmSet(true);
   };
 
-  // Réinitialiser l'alarme
   const handleResetAlarm = () => {
     setAlarmSet(false);
     setAlarmTime({ hours: 0, minutes: 0 });
   };
 
-  // Convertir le nombre en 2 chiffres
+  
   const padNumber = (num: number) => {
     return num < 10 ? `0${num}` : `${num}`;
   };
@@ -59,7 +58,7 @@ export const Horloge = () => {
           <h2 className="text-center text-2xl font-semibold mb-4">Réglage de l'alarme</h2>
           
           <div className="flex items-center mb-4">
-            {/* Liste déroulante heures */}
+          
             <select
               className="bg-gray-700 text-white p-2 m-2 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={alarmTime.hours}
@@ -71,7 +70,7 @@ export const Horloge = () => {
                 </option>
               ))}
             </select>
-            {/* Liste déroulante minutes */}
+            
             <select
               className="bg-gray-700 text-white p-2 m-2 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={alarmTime.minutes}
@@ -85,7 +84,7 @@ export const Horloge = () => {
             </select>
           </div>
           
-          {/* Affichage de l'alarme */}
+      
           {alarmSet && (
             <div className="mt-4 text-xl font-medium">
               L'alarme est réglée pour {padNumber(alarmTime.hours)}:{padNumber(alarmTime.minutes)}
@@ -94,7 +93,6 @@ export const Horloge = () => {
         </div>
       </div>
 
-      {/* Boutons pour lancer et réinitialiser l'alarme */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
         <button
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105"

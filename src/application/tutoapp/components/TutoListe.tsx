@@ -41,7 +41,7 @@ export const TutoList = () => {
             onChange={handleCheckboxChange}
             className='mr-2 leading-tight'
           />
-          <span>Afficher</span>
+          
         </label>
       </div>
     </div>

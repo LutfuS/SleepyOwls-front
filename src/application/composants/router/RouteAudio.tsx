@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const audio = (sleepSound: string ) => {
-    axios.post('http://localhost:3000/login', {sleepSound: sleepSound})
+    axios.post('http://localhost:3000/sleepLog', {sleepSound: sleepSound})
     .then(response => {
         console.log(response.data)
     })

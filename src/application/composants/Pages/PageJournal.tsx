@@ -6,14 +6,14 @@ import { PopUp2 } from "../../../PopUP/PopUp2"
 
 export const Journal = () => {
 
-    return(
-    <div className="bg-[#091928]">
-        <PopUp2/>
-        <GraphiqueRecap/>
-     <NoteTaker/>
-    
-     </div>
-    )
+return(
+<div className="bg-[#091928]">
+    <PopUp2/>
+    <GraphiqueRecap/>
+    <NoteTaker/>
+
+    </div>
+)
 }
 
 

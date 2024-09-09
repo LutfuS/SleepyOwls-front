@@ -13,9 +13,9 @@ setIsChecked(checked);
 
 
 if (checked) {
-  toast.success('Notification activé!');
+  toast.success("L'envoie de sms a été activé");
 } else {
-  toast.info('Notification desactivé.');
+  toast.info("L'envoie de sms a été désSactivé");
 }
 };
 
@@ -27,7 +27,7 @@ return (
       checked={isChecked}
       onChange={handleCheckboxChange}
     />
-    Sons
+   Sms
   </label>
   
 
@@ -39,7 +39,7 @@ return (
 
 
 
-export const VibrationS = () => {
+export const Sms = () => {
 
 const [isChecked, setIsChecked] = useState(false);
 
@@ -49,9 +49,9 @@ setIsChecked(checked);
 
 
 if (checked) {
-  toast.success('Vibration activé!');
+  toast.success("L'envoie d'email a été activé!");
 } else {
-  toast.info('Vibration desactivé.');
+  toast.info("L'envoie d'email a été désactivé!");
 }
 };
 
@@ -63,7 +63,7 @@ return (
       checked={isChecked}
       onChange={handleCheckboxChange}
     />
-    Vibration
+   Email
   </label>
   
 
@@ -80,8 +80,10 @@ export const ParamNotif = () => {
       <div className="flex flex-col items-center w-full">
         <div className="max-h-screen flex flex-col items-center text-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">Notification</h1>
+          <div className="mb-4">
           <NotificationS />
-          <VibrationS />
+          </div>
+          <Sms />
 
         
           

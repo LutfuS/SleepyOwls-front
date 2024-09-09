@@ -11,11 +11,12 @@ import { Journal } from "../Pages/PageJournal";
 import { ParamNotif } from "../Pages/Parametre_notifications";
 import { Compte } from "../Pages/Parametre_compte";
 import { Doc } from "../Pages/Parametre_documentations";
-import { Rappel } from "../Pages/Parametre_Rappel";
+import {  Rappel } from "../Pages/Parametre_Rappel";
 import { Conseil } from "../Pages/Parametre_conseil";
 import { TutoList } from "../../tutoapp/components/TutoListe";
-import { Vibration } from "../Pages/Parametre_Vibration";
+import { ParamVibration } from "../Pages/Parametre_Vibration";
 import {  Microphone } from "../Pages/Parametre_microphone";
+import { PaccueilAuth } from "../Pages/PageAccueilAuth";
 
 
 export const router = createBrowserRouter([
@@ -25,8 +26,9 @@ export const router = createBrowserRouter([
       children: [
         {
           path: "/",
-          element: <Paccueil />,
+          element: <PaccueilAuth/>,
         },
+       
         {
           path: "/AuthForm",
           element: <AuthForm />,
@@ -74,7 +76,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "/Parametre_Rappel",
-            element: <Rappel/>
+            element: < Rappel/>
           },
           {
             path: "/Parametre_conseil",
@@ -82,7 +84,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "/Parametre_Vibration",
-            element: <Vibration/>
+            element: <ParamVibration/>
           },
           {
             path: "/Tuto",

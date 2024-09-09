@@ -10,7 +10,7 @@ import axios from "axios"
 
 
 export const addOneUser = (email: string, password: string) => {
-    axios.post('http://localhost:3000/user', {email: email, password: password})
+    axios.post('http://localhost:3001/user', {email: email, password: password})
     .then(response => {
     console.log(response.data)
     })
@@ -20,7 +20,7 @@ export const addOneUser = (email: string, password: string) => {
 }
 
 export const login = (email: string, password: string) => {
-    axios.post('http://localhost:3000/login', {email: email, password: password})
+    axios.post('http://localhost:3001/login', {email: email, password: password})
     .then(response => {
         console.log(response.data)
     })
@@ -29,4 +29,19 @@ export const login = (email: string, password: string) => {
     })
 }
 
+
+
+export const logout = () => {
+    axios.post('http://localhost:3000/logout')
+    .then(response => {
+        console.log("Logout successful:", response.data);
+     
+        localStorage.removeItem("token"); 
+       
+        window.location.href = '/login'; 
+    })
+    .catch(error => {
+        console.log("ERROR during logout =>", error);
+    });
+}
 

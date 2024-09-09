@@ -1,40 +1,89 @@
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const Vibration = () => {
-    return (
-      <div className="bg-[#091928] min-h-screen flex flex-col items-center text-white font-roboto">
-        {/* Titre principal en haut, centré */}
-        <div className="w-full flex justify-center mt-4">
-          <h1 className="text-4xl font-bold mb-8 text-center">
-            Vibration
-          </h1>
-        </div>
-  
-        {/* Contenu principal */}
-        <div className="flex flex-col items-center w-full p-4">
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <input type="checkbox" id="Vib1" className="form-checkbox text-[#1D9BF0]" />
-              <label htmlFor="Vib1" className="text-lg">Secondaire</label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <input type="checkbox" id="Vib2" className="form-checkbox text-[#1D9BF0]" />
-              <label htmlFor="Vib2" className="text-lg">Jamais</label>
-            </div>
-          </div>
-  
-          {/* Ligne de séparation */}
+  const [checkbox, setIsCheckbox] = useState(false);
+
+  const handleCheckboxChange = () => {
+    const checked = !checkbox; 
+    setIsCheckbox(checked);
+
+    toast.dismiss(); 
+
+    if (checked) {
+      toast.success("Le mode secondaire a été activé!");
+    } else {
+      toast.info("Le mode secondaire a été désactivé.");
+    }
+  };
+
+  return (
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          checked={checkbox}
+          onChange={handleCheckboxChange}
+        />
+        Secondaire
+      </label>
+
+      <ToastContainer limit={3} autoClose={3000} />
+    </div>
+  );
+};
+
+export const Vibration1 = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckbox = () => {
+    const checked = !isChecked; 
+    setIsChecked(checked);
+
+    toast.dismiss(); 
+
+    if (checked) {
+      toast.success("Vibration activée!");
+    } else {
+      toast.info("Vibration désactivée.");
+    }
+  };
+
+  return (
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckbox}
+        />
+        Vibration
+      </label>
+
+      <ToastContainer limit={3} autoClose={3000} />
+    </div>
+  );
+};
+
+export const ParamVibration = () => {
+  return (
+    <div className="min-h-screen bg-[#091928] flex flex-col items-center text-white">
+      <div className="flex flex-col items-center w-full">
+        <div className="max-h-screen flex flex-col items-center text-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">Vibration</h1>
+          <Vibration />
+          <Vibration1 />
           <div className="w-3/4 border-t border-gray-600 my-8" />
-  
-          <div className="text-center">
-            <h2 className="text-3xl font-semibold mb-4">
-              À propos
-            </h2>
-            <p className="text-lg opacity-75">
-              Vous pouvez gérer le mode de vibration que vous voulez, l'activer ou non.
+          <div className="w-full text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">À propos</h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+              Cette option permet de paramétrer l'option de vibration.
             </p>
           </div>
+          
         </div>
       </div>
-    );
-  };
-  
-  
+    </div>
+  );
+};

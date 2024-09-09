@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { addOneUser } from '../../router/AuthRouter';
+import { useNavigate } from 'react-router-dom';
 
 export const AuthForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>(''); 
   const [Cpassword, setCPassword] = useState<string>(''); 
-
+  const navigate = useNavigate()
   
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addOneUser(email, password)
+    navigate("/")
   };
 
   return (
